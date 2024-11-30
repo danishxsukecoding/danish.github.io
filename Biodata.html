@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata & Childhood Photos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('bg4.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      z-index: 1000; /* Ensure the button is on top of other elements */
+    }
+
+    .home-button:hover {
+      background-color: #555;
+    }
+
+    .container {
+      background-color: gray;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 90%;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .biodata-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-pic {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .profile-pic img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
+
+    .biodata {
+      flex: 2;
+    }
+
+    .biodata h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .biodata p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .biodata a {
+      color: green;
+      text-decoration: none;
+    }
+
+    .biodata a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .photo {
+      border-radius: 10px;
+      overflow: hidden;
+      width: calc(33.333% - 20px);
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .photo img:hover {
+      transform: scale(1.1);
+    }
+
+    ol, ul {
+      text-align: left;
+      padding: 0;
+      margin: 0 0 20px 20px;
+    }
+
+    ol li, ul li {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .tv-show {
+      margin-bottom: 20px;
+    }
+
+    .tv-show h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .tv-show video, .tv-show img, .tv-show audio {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-button">Home</a>
+
+  <div class="container biodata-container">
+    <div class="profile-pic">
+      <img src="myimage.jpg" alt="Profile Picture">
+    </div>
+    <div class="biodata">
+      <h1>Biodata</h1>
+      <p><strong>Full Name:</strong> MUHAMMAD DANISH BIN MD SAKIMAN</p>
+      <p><strong>Date of Birth:</strong> 7th July 2004</p>
+      <p><strong>Age:</strong> 20 Years Old</p>
+      <p><strong>Gender:</strong> Male</p>
+      <p><strong>Place of Birth:</strong> Klang, Selangor, Malaysia</p>
+      <p><strong>Personal Email Address:</strong> <a href="mailto:Muhddanish0707@gmail.com">Muhddanish0707@gmail.com</a></p>
+      <p><strong>Student Number:</strong> 2022841846</p>
+      <p><a href="#favorite-tv-shows">Go to MY FAVOURITE TV SHOWS</a></p> 
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>MY Childhood Photos</h1>
+    <div class="gallery">
+      <div class="photo">
+        <a href="photo1.jpg" target="_blank">
+          <img src="photo1.jpg" alt="Childhood Photo 1">
+        </a>
+      </div>
+      <div class="photo">
+        <a href="photo2.jpg" target="_blank">
+          <img src="photo2.jpg" alt="Childhood Photo 2">
+        </a>
+      </div>
+      <div class="photo">
+        <a href="photo3.jpg" target="_blank">
+          <img src="photo3.jpg" alt="Childhood Photo 3">
+        </a>
+      </div>
+      <div class="photo">
+        <a href="photo4.jpg" target="_blank">
+          <img src="photo4.jpg" alt="Childhood Photo 4">
+        </a>
+      </div>
+      <div class="photo">
+        <a href="photo5.jpg" target="_blank">
+          <img src="photo5.jpg" alt="Childhood Photo 5">
+        </a>
+      </div>
+      <div class="photo">
+        <a href="photo6.jpg" target="_blank">
+          <img src="photo6.jpg" alt="Childhood Photo 6">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>MY FAVOURITE FOODS AND DRINKS</h1>
+    <ol>
+      <li>Nasi lemak</li>
+      <li>Fried chicken</li>
+      <li>Durian Bentong</li>
+      <li>Cendol Segamat</li>
+      <li>Iced chocolate</li>
+    </ol>
+  </div>
+
+  <div class="container">
+    <h1>MY HOBBY</h1>
+    <ul>
+      <li>Playing video games</li>
+      <li>Playing football</li>
+      <li>Watching Pingu</li>
+      <li>Sleep</li>
+      <li>Eat</li>
+    </ul>
+  </div>
+
+  <div class="container" id="favorite-tv-shows">
+    <h1>MY FAVOURITE TV SHOWS</h1>
+    <div class="tv-show">
+      <h2>SpongeBob SquarePants</h2>
+      <video controls>
+        <source src="campfire.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="tv-show">
+      <h2>Hunter x Hunter</h2>
+            <img src="hunterxhunter.jpg" alt="Hunter x Hunter">
+      <audio controls>
+        <source src="kurapika.mp4" type="audio/mp4">
+      </audio>
+    </div>
+  </div>
+</body>
+</html>

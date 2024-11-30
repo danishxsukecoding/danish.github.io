@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills and Works</title>
+    <style>
+        body {
+            background-color: grey;
+            background-image: url('bg4.jpg');
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .clock-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #clock {
+            color: white;
+        }
+
+        .home-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            z-index: 1000; 
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        .container {
+            width: 80%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+        }
+
+        h1, h2 {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill {
+            width: 100%;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .skill span {
+            width: 20%;
+            text-align: left;
+        }
+
+        .progress-bar {
+            width: 70%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 20px;
+            background-color: #4caf50;
+        }
+
+        .percentage {
+            width: 10%;
+            text-align: right;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .photo {
+            width: 45%;
+            margin-bottom: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        function updateTime() {
+            const clock = document.getElementById('clock');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateTime, 1000);
+        window.onload = updateTime;
+    </script>
+</head>
+<body>
+    <a href="index.html" class="home-button">Home</a>
+    <div class="clock-container">
+        <div id="clock"></div>
+    </div>
+    <div class="container">
+        <h1>My Skills</h1>
+        <div class="skills">
+            <div class="skill">
+                <span>MICROSOFT WORDS</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+                <span class="percentage">85%</span>
+            </div>
+            <div class="skill">
+                <span>MICROSOFT POWERPOINT</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                <span class="percentage">80%</span>
+            </div>
+            <div class="skill">
+                <span>CANVA</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                <span class="percentage">80%</span>
+            </div>
+            <div class="skill">
+                <span>MICROSOFT EXCEL</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%;"></div>
+                </div>
+                <span class="percentage">60%</span>
+            </div>
+        </div>
+        <h2>Example of My Works</h2>
+        <div class="gallery">
+            <div class="photo"><img src="work1.jpg" alt="Work 1"></div>
+            <div class="photo"><img src="work2.jpg" alt="Work 2"></div>
+            <div class="photo"><img src="work3.jpg" alt="Work 3"></div>
+            <div class="photo"><img src="work4.jpg" alt="Work 4"></div>
+        </div>
+    </div>
+</body>
+</html>
+
