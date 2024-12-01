@@ -8,6 +8,14 @@ body {
     font-family: sans-serif;
 }
 
+.header {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
 .main {
     width: 100%;
     background: url('bg4.jpg') no-repeat center center/cover;
@@ -35,7 +43,7 @@ body {
 ul {
     margin-top: -4%;
     list-style: none;
-    display: none; /
+    display: none; 
 }
 
 ul li {
@@ -134,4 +142,14 @@ ul li a:hover {
 
 .show {
     display: block !important; 
+}
+
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
 }
