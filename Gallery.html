@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <style>
+        body {
+            background-color: grey;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .clock-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #clock {
+            color: white;
+        }
+
+        .home-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            z-index: 1000; 
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+
+        .container {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .header, .footer {
+            margin-bottom: 20px;
+        }
+
+        .header h1, .footer p {
+            margin: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .photo {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 5px;
+            width: 45%;
+            height: auto;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function updateTime() {
+            const clock = document.getElementById('clock');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateTime, 1000);
+        window.onload = updateTime;
+    </script>
+</head>
+<body>
+    <a href="index.html" class="home-button">Home</a>
+    <div class="clock-container">
+        <div id="clock"></div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>WELCOME TO MY GALLERY!!</h1>
+        </div>
+        <div class="gallery">
+            <div class="photo"><img src="gmbr1.jpg" alt="Photo 1"></div>
+            <div class="photo"><img src="gmbr2.jpg" alt="Photo 2"></div>
+            <div class="photo"><img src="gmbr3.jpg" alt="Photo 3"></div>
+            <div class="photo"><img src="gmbr4.jpg" alt="Photo 4"></div>
+            <div class="photo"><img src="gmbr5.jpg" alt="Photo 5"></div>
+            <div class="photo"><img src="gmbr6.jpg" alt="Photo 6"></div>
+            <div class="photo"><img src="gmbr7.jpg" alt="Photo 7"></div>
+            <div class="photo"><img src="gmbr8.jpg" alt="Photo 8"></div>
+            <div class="photo"><img src="gmbr9.jpg" alt="Photo 9"></div>
+            <div class="photo"><img src="gmbr10.jpg" alt="Photo 10"></div>
+            <div class="photo"><img src="gmbr11.jpg" alt="Photo 11"></div>
+            <div class="photo"><img src="gmbr12.jpg" alt="Photo 12"></div>
+        </div>
+        <div class="footer">
+            <p>We'll meet again<br>Don't know where<br>Don't know when<br>But I know we'll meet again some sunny day</p>
+        </div>
+    </div>
+</body>
+</html>

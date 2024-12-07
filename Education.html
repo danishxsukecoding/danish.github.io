@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        body {
+            background-color: grey;
+            background-image: url('bg4.jpg');
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .clock-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #clock {
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 2px solid white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        td img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            z-index: 1000; 
+        }
+
+        .home-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home-button">Home</a>
+    <div class="clock-container">
+        <div id="clock"></div>
+    </div>
+    <div class="container">
+        <h1>EDUCATION</h1>
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>LEVEL</th>
+                <th>Place</th>
+                <th>Image</th>
+            </tr>
+            <tr>
+                <td>2011-2016</td>
+                <td>UJIAN PENCAPAIAN SEKOLAH RENDAH</td>
+                <td>SEKOLAH KEBANGSAAN KAMPONG RAJA UDA</td>
+                <td><img src="kru.jpg" alt="Image 1"></td>
+            </tr>
+            <tr>
+                <td>2017-2022</td>
+                <td>SIJIL PELAJARAN MALAYSIA</td>
+                <td>SEKOLAH MENENGAH KEBANGSAAN RAJA LUMU</td>
+                <td><img src="rl.jpg" alt="Image 2"></td>
+            </tr>
+            <tr>
+                <td>2022-2025</td>
+                <td>DIPLOMA OF INFORMATION MANAGEMENT</td>
+                <td>UNIVERSITI TEKNOLOGI MARA SEGAMAT</td>
+                <td><img src="uitms.jpg" alt="Image 3"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function updateTime() {
+            const clock = document.getElementById('clock');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateTime, 1000);
+        window.onload = updateTime;
+    </script>
+</body>
+</html>
